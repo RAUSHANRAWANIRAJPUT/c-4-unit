@@ -1,0 +1,32 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+class Engine {
+public:
+    Engine() {
+        cout << "Engine Created" << endl;
+    }
+    ~Engine() {
+        cout << "Engine Destroyed" << endl;
+    }
+};
+class Car {
+public:
+    string name;
+    Engine e;  // Composition (Car owns Engine)
+
+    Car(string n)// : name(n)
+    { name=n;
+        cout << "Car Created: " << name << endl;
+    }
+
+    ~Car() {
+        cout << "Car Destroyed: " << name << endl;
+    }
+};
+
+int main() {
+    Car c("BMW");
+    return 0;
+}
